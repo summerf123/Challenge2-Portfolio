@@ -1,0 +1,44 @@
+body{background-color: rgb(105, 166, 198);
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-family: 'Raleway', sans-serif;}
+h1{color:black}
+
+#myphoto {
+display: flex;
+}
+.topnav{
+    display: flex;
+     justify-content: right;
+     font-size: 30px;
+ }
+ .myphoto{
+    border: 5px solid black;
+    width: 500px;
+    height: 500px;
+    display: flex;
+   
+}
+ .container {
+    display: flex;
+    background-color: aquamarine;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    text-align: right;
+}
+
+
+div > a {
+    text-decoration: none;
+    margin: 10px;
+    color:aliceblue
+}
+
+a:hover {
+    color:red;
+}
+address {
+    text-decoration: none;
+}
+.email {text-decoration: none;}
