@@ -1,44 +1,217 @@
-body{background-color: rgb(105, 166, 198);
-    font-family: 'PT Sans', sans-serif;
-    font-family: 'PT Serif', serif;
-    font-family: 'Raleway', sans-serif;}
-h1{color:black}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-family: "Arimo", sans-serif;
+  font-family: "PT Sans", sans-serif;
+  font-family: "PT Serif", serif;
+  font-family: "Raleway", sans-serif;
+}
+.navbartop {
+  display: flex;
+  justify-content: right;
+  background-color: #0d0e0e;
+}
+.navbar {
+  margin: 1em 3em;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #060708;
+  box-shadow: 5px 5px 8 px grey;
+  background-color: #e3ecf1;
+}
+.header {
+  display: block;
+}
+.bannerimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  /* min-width: 60%; //this doesnt do anything - why */
+  text-align: center;
+  color: white;
+}
+.navbar:hover {
+  color: white;
+  background-color: #155e86;
+}
 
-#myphoto {
-display: flex;
-}
-.topnav{
-    display: flex;
-     justify-content: right;
-     font-size: 30px;
- }
- .myphoto{
-    border: 5px solid black;
-    width: 500px;
-    height: 500px;
-    display: flex;
-   
-}
- .container {
-    display: flex;
-    background-color: aquamarine;
-    width: 80%;
-    height: 500px;
-    margin: auto;
-    text-align: right;
+.headertext {
+  position: absolute;
+  align-items: center;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
-
-div > a {
-    text-decoration: none;
-    margin: 10px;
-    color:aliceblue
+.section {
+  display: flex;
+  width: 90%;
+  margin: 1% auto;
 }
 
-a:hover {
-    color:red;
+.content {
+  display: flex;
+  align-items: center;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
 }
-address {
-    text-decoration: none;
+
+a {
+  text-decoration: none;
 }
-.email {text-decoration: none;}
+
+a.contactlinks {
+  text-decoration: none;
+}
+a.contactlinks:hover {
+  background-color: #2b4878;
+  color: white;
+}
+
+.img {
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 8px 8px 5px grey;
+  display: flex;
+  justify-content: center;
+  /* why wont display flex and JC center, center my imgs? */
+}
+
+.description {
+  margin-left: 3%;
+  flex: 0 0 60%;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav,
+  .section {
+    flex-direction: column;
+  }
+}
