@@ -130,55 +130,71 @@ body {
 }
 .navbartop {
   display: flex;
-  justify-content: right;
-  background-color: #0d0e0e;
+  justify-content: center;
+  background: linear-gradient(#050505, #373838);
 }
 .navbar {
-  margin: 1em 3em;
-  border: 1px solid black;
+  margin: 1em 1em;
+  border: 1px solid;
   padding: 10px 20px;
+  text-align: center;
   border-radius: 10px;
   color: #060708;
   box-shadow: 5px 5px 8 px grey;
-  background-color: #e3ecf1;
+  background-color: white;
 }
 .header {
-  display: block;
+  margin: auto;
 }
 .bannerimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  /* min-width: 60%; //this doesnt do anything - why */
+  /* outline: 2px solid black; */
+  /* display: block; */
+  /* position: relative; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* why is display flex and JC not working */
+  /* want the text lets code together to go on top of bannerimg */
+  /* position: relative; */
+  justify-content: center;
   text-align: center;
   color: white;
 }
 .navbar:hover {
   color: white;
-  background-color: #155e86;
+  background-color: #0d0e0e;
 }
 
 .headertext {
   position: absolute;
-  align-items: center;
+  /* justify-content: center; */
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* top , left, transform - what do these do together */
   color: white;
+  font-size: 5em;
 }
 
 .section {
   display: flex;
   width: 90%;
-  margin: 1% auto;
+  margin: 10% auto;
+  font-size: 20px;
+}
+.section h2 {
+  font-size: 50px;
+  margin-bottom: 8px;
+  /* why is this not giving me margin bottom under h2 insection */
 }
 
 .content {
   display: flex;
   align-items: center;
   border-right: 5px solid black;
-  border-top: 5px solid black;
+  /* border-top: 5px solid black;*/
 }
 
 a {
@@ -186,7 +202,11 @@ a {
 }
 
 a.contactlinks {
+  display: flex;
+  justify-content: space between;
   text-decoration: none;
+  color: black;
+  margin: 1em auto;
 }
 a.contactlinks:hover {
   background-color: #2b4878;
@@ -208,10 +228,43 @@ a.contactlinks:hover {
   flex: 0 0 60%;
 }
 
+@media screen and (max-width: 922px) {
+  main,
+  nav,
+  .section {
+    flex-direction: row;
+  }
+}
 @media screen and (max-width: 768px) {
   main,
   nav,
   .section {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  main,
+  nav,
+  .section {
     flex-direction: column;
+  }
+  .content {
+    /* border-bottom: 5px solid black; */
+    margin-bottom: 5px;
+    border-right: none;
+  }
+  .img {
+    margin: 2em 1em;
+  }
+  .description {
+    /* border-bottom: 5px solid black; */
+    margin-bottom: 10px 10px;
+  }
+  .section {
+    border-top: 5px solid black;
+  }
+  .section:first-of-type {
+    border-top: none;
   }
 }
