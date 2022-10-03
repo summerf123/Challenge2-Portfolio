@@ -123,6 +123,7 @@ table {
   border-spacing: 0;
 }
 body {
+  font-family: "Long Cang", cursive;
   font-family: "Arimo", sans-serif;
   font-family: "PT Sans", sans-serif;
   font-family: "PT Serif", serif;
@@ -131,7 +132,17 @@ body {
 .navbartop {
   display: flex;
   justify-content: center;
-  background: linear-gradient(#050505, #373838);
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgb(12, 12, 12) 0%,
+    rgb(19, 19, 19) 35%,
+    rgb(11, 12, 11) 100%
+  );
+  box-shadow: 10px 5px 5px grey;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
 }
 .navbar {
   margin: 1em 1em;
@@ -145,19 +156,12 @@ body {
 }
 .header {
   margin: auto;
+  box-shadow: 8px 8px 5px grey;
 }
 .bannerimg {
-  /* outline: 2px solid black; */
-  /* display: block; */
-  /* position: relative; */
-  /* margin-left: auto;
-  margin-right: auto; */
   display: flex;
   width: 100%;
-  height: 100%;
-  /* why is display flex and JC not working */
-  /* want the text lets code together to go on top of bannerimg */
-  /* position: relative; */
+  height: 60%;
   justify-content: center;
   text-align: center;
   color: white;
@@ -167,34 +171,55 @@ body {
   background-color: #0d0e0e;
 }
 
-.headertext {
-  position: absolute;
-  /* justify-content: center; */
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* top , left, transform - what do these do together */
-  color: white;
-  font-size: 5em;
-}
-
 .section {
   display: flex;
   width: 90%;
   margin: 10% auto;
   font-size: 20px;
+  /* border: 2px solid black; */
+  /* margin-top: 20%; */
+}
+.section:nth-of-type(1) {
+  margin-top: 20%;
+} /* this put the margin top only on the first element so it makes white space before getting into main content */
+
+#lets {
+  font-size: 4em;
+  position: absolute;
+  text-align: center;
+  top: 25%;
+  left: 15%;
+  color: white;
+}
+#code {
+  font-size: 4em;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 20%;
+  color: white;
+}
+
+#together {
+  font-size: 4em;
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 26%;
+  color: white;
+}
+
+#whitespace {
+  margin: auto auto 30px auto;
 }
 .section h2 {
   font-size: 50px;
-  margin-bottom: 8px;
-  /* why is this not giving me margin bottom under h2 insection */
 }
 
 .content {
-  display: flex;
-  align-items: center;
+  width: 100%;
+  margin-top: 20px;
   border-right: 5px solid black;
-  /* border-top: 5px solid black;*/
 }
 
 a {
@@ -204,6 +229,8 @@ a {
 a.contactlinks {
   display: flex;
   justify-content: space between;
+  flex: 10%;
+  text-align: center;
   text-decoration: none;
   color: black;
   margin: 1em auto;
@@ -212,15 +239,21 @@ a.contactlinks:hover {
   background-color: #2b4878;
   color: white;
 }
+#email {
+  display: flex;
+  justify-content: flex-start;
+  border: 2px solid black;
+}
 
 .img {
   width: 50%;
   height: auto;
   border-radius: 20px;
   box-shadow: 8px 8px 5px grey;
-  display: flex;
-  justify-content: center;
-  /* why wont display flex and JC center, center my imgs? */
+  /* display: flex;
+  justify-content: center; */
+  margin-left: 25%;
+  margin-right: 0px;
 }
 
 .description {
@@ -234,12 +267,18 @@ a.contactlinks:hover {
   .section {
     flex-direction: row;
   }
+  .headertext {
+    padding-top: 20%;
+  }
 }
 @media screen and (max-width: 768px) {
   main,
   nav,
   .section {
     flex-direction: row;
+  }
+  .headertext {
+    padding-top: 50%;
   }
 }
 
@@ -248,6 +287,9 @@ a.contactlinks:hover {
   nav,
   .section {
     flex-direction: column;
+  }
+  .headertext {
+    padding-top: 80%;
   }
   .content {
     /* border-bottom: 5px solid black; */
@@ -266,5 +308,17 @@ a.contactlinks:hover {
   }
   .section:first-of-type {
     border-top: none;
+  }
+  a.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 50%;
+    text-align: center;
+  }
+  .navbartop {
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 }
