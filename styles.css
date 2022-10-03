@@ -169,34 +169,32 @@ body {
   color: white;
   background-color: #0d0e0e;
 }
-.horizion:hover{
+.horizion:hover {
   transform: scale(150%);
-  transition: all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 .section {
   display: flex;
   width: 90%;
   margin: 10% auto;
   font-size: 20px;
-  /* border: 2px solid black; */
-  /* margin-top: 20%; */
 }
 .section:nth-of-type(1) {
-  margin-top: 20%;
+  margin-top: 15%;
 } /* this put the margin top only on the first element so it makes white space before getting into main content */
 
-.portfolioheader1{
+.portfolioheader1 {
   font-family: "PT Sans", sans-serif;
   margin: 2% 5%;
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.portfolioheader2{
+.portfolioheader2 {
   font-family: "PT Sans", sans-serif;
   margin: 2% 5%;
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   text-align: center;
 }
 
@@ -233,23 +231,25 @@ body {
 .section h2 {
   font-size: 50px;
 }
-.horizion{
-  width:100%;
+.horizion {
+  margin-top: 5px;
+  width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.personalwebsite{
-  width:60%;
+.personalwebsite {
+  margin-top: 1px;
+  width: 60%;
   height: 100%;
   border-radius: 15px;
 }
 
-.personalwebsite:hover{
+.personalwebsite:hover {
   transform: scale(150%);
-  transition: all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 .content {
-  width:70%;
+  width: 70%;
   margin-top: 20px;
   border-right: 5px solid black;
 }
@@ -257,20 +257,27 @@ body {
 a {
   text-decoration: none;
 }
+div.description {
+  display: block;
+  justify-content: left;
+}
 
 a.contactlinks {
   display: flex;
-  justify-content: space between;
+  justify-content: center;
   flex: 10%;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   color: black;
   margin: 1em auto;
   font-family: "PT Sans", sans-serif;
+  border: 2px solid black;
+  width: 25%;
 }
 a.contactlinks:hover {
   background-color: #2b4878;
   color: white;
+  text-align: left;
 }
 #email {
   display: flex;
@@ -296,11 +303,11 @@ a.contactlinks:hover {
   margin-left: 3%;
   flex: 0 0 60%;
 }
-.row{
+.row {
   display: flex;
 }
-.column{
-  flex:100%;
+.column {
+  flex: 100%;
   padding: 5px;
   margin: auto 50px auto auto;
 }
@@ -310,7 +317,6 @@ a.contactlinks:hover {
   nav,
   .section {
     flex-direction: row;
-
   }
   .headertext {
     padding-top: 20%;
@@ -336,6 +342,18 @@ a.contactlinks:hover {
   div {
     display: flex;
     justify-content: center;
+    margin-top: 10%;
+  }
+  div.row {
+    display: flex;
+    flex-direction: column;
+  }
+  div.column {
+    display: flex;
+    flex-direction: column;
+  }
+  a.contactlinks {
+    display: block;
   }
   .headertext {
     padding-top: 80%;
@@ -345,13 +363,34 @@ a.contactlinks:hover {
     margin-bottom: 5px;
     border-right: none;
   }
-  .img {
+  div.img {
     margin: 2em 1em;
+    display: flex;
+    justify-content: center;
+  }
+  .img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 8px 8px 5px grey;
+    /* display: flex;
+    justify-content: center; */
+    margin-left: 15%;
+    margin-right: 0px;
   }
   .description {
     /* border-bottom: 5px solid black; */
-    margin-bottom: 10px 10px;
+    margin-bottom: 10px;
   }
+  div.description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .section:nth-of-type(1) {
+    margin-top: 50%;
+  } /* this put the margin top only on the first element so it makes white space before getting into main content */
+
   .section {
     border-top: 5px solid black;
   }
@@ -359,9 +398,14 @@ a.contactlinks:hover {
     border-top: none;
   }
   a.navbar {
-    padding: 10px 20px;
-    width: 50%;
+    padding: 10px 0px;
+    width: 21%;
     text-align: center;
+  }
+  div#firstlink,
+  div#secondlink,
+  div#thirdlink {
+    margin-top: 0px;
   }
   .navbartop {
     display: flex;
@@ -369,30 +413,35 @@ a.contactlinks:hover {
     text-align: center;
     padding: 10px 20px;
   }
+  .bannerimg {
+    display: none;
+  }
   #firstlink,
   #secondlink,
   #thirdlink {
     display: flex;
     justify-content: center;
-    /* padding: 10px 0px; */
+    padding: 0px 0px;
   }
   #lets,
   #code,
   #together {
     margin-top: 30%;
-    color:black;
+    color: black;
+    display: none;
   }
   #together {
-    border-bottom: 5px solid black;}
-  .horizion{
-    width:100%;
+    border-bottom: 5px solid black;
+  }
+  .horizion {
+    width: 100%;
     height: 100%;
   }
   .text {
     width: 100%;
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
   div {
     display: flex;
     justify-content: center;
@@ -402,8 +451,19 @@ a.contactlinks:hover {
     min-width: 100%;
     min-height: 100%;
   }
+  .section:nth-of-type(1) {
+    margin-top: 32%;
+  }
+  .section:nth-of-type(1) {
+    margin-top: 50%;
+  } /* this put the margin top only on the first element so it makes white space before getting into main content */
 }
-@media screen and (max-width: 300px) {
+div.row {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 200px) {
   div {
     display: flex;
     justify-content: center;
@@ -413,6 +473,9 @@ a.contactlinks:hover {
     min-width: 100%;
     min-height: 100%;
   }
+  .section:nth-of-type(1) {
+    margin-top: 50%;
+  } /* this put the margin top only on the first element so it makes white space before getting into main content */
   #lets,
   #code,
   #together {
@@ -426,4 +489,11 @@ a.contactlinks:hover {
   .img {
     margin-top: 50%;
   }
-
+  .section:nth-of-type(1) {
+    margin-top: 32%;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+}
