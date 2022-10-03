@@ -272,7 +272,8 @@ a.contactlinks {
   margin: 1em auto;
   font-family: "PT Sans", sans-serif;
   border: 2px solid black;
-  width: 25%;
+  border-radius: 50px;
+  width: 30%;
 }
 a.contactlinks:hover {
   background-color: #2b4878;
