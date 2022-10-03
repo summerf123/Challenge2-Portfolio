@@ -123,13 +123,11 @@ table {
   border-spacing: 0;
 }
 body {
-  font-family: "Long Cang", cursive;
-  font-family: "Arimo", sans-serif;
-  font-family: "PT Sans", sans-serif;
-  font-family: "PT Serif", serif;
-  font-family: "Raleway", sans-serif;
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 700;
 }
 .navbartop {
+  font-family: "PT Sans", sans-serif;
   display: flex;
   justify-content: center;
   background: #020024;
@@ -143,6 +141,7 @@ body {
   justify-content: center;
   position: fixed;
   width: 100%;
+  padding: 35px 20px;
 }
 .navbar {
   margin: 1em 1em;
@@ -161,7 +160,7 @@ body {
 .bannerimg {
   display: flex;
   width: 100%;
-  height: 60%;
+  height: 82%;
   justify-content: center;
   text-align: center;
   color: white;
@@ -170,7 +169,10 @@ body {
   color: white;
   background-color: #0d0e0e;
 }
-
+.horizion:hover{
+  transform: scale(150%);
+  transition: all .7s ease-in-out;
+}
 .section {
   display: flex;
   width: 90%;
@@ -183,11 +185,26 @@ body {
   margin-top: 20%;
 } /* this put the margin top only on the first element so it makes white space before getting into main content */
 
+.portfolioheader1{
+  font-family: "PT Sans", sans-serif;
+  margin: 2% 5%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.portfolioheader2{
+  font-family: "PT Sans", sans-serif;
+  margin: 2% 5%;
+  display: flex;
+  justify-content:flex-start;
+  text-align: center;
+}
+
 #lets {
   font-size: 4em;
   position: absolute;
   text-align: center;
-  top: 25%;
+  top: 34%;
   left: 15%;
   color: white;
 }
@@ -195,7 +212,7 @@ body {
   font-size: 4em;
   position: absolute;
   text-align: center;
-  top: 30%;
+  top: 41%;
   left: 20%;
   color: white;
 }
@@ -204,20 +221,35 @@ body {
   font-size: 4em;
   position: absolute;
   text-align: center;
-  top: 35%;
+  top: 48%;
   left: 26%;
   color: white;
 }
 
 #whitespace {
-  margin: auto auto 30px auto;
+  margin: 0% 0% 0px auto;
+  height: 0%;
 }
 .section h2 {
   font-size: 50px;
 }
+.horizion{
+  width:100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.personalwebsite{
+  width:60%;
+  height: 100%;
+  border-radius: 15px;
+}
 
+.personalwebsite:hover{
+  transform: scale(150%);
+  transition: all .7s ease-in-out;
+}
 .content {
-  width: 100%;
+  width:70%;
   margin-top: 20px;
   border-right: 5px solid black;
 }
@@ -234,6 +266,7 @@ a.contactlinks {
   text-decoration: none;
   color: black;
   margin: 1em auto;
+  font-family: "PT Sans", sans-serif;
 }
 a.contactlinks:hover {
   background-color: #2b4878;
@@ -244,7 +277,10 @@ a.contactlinks:hover {
   justify-content: flex-start;
   border: 2px solid black;
 }
-
+.text {
+  font-family: "PT Sans", sans-serif;
+  width: 60%;
+}
 .img {
   width: 50%;
   height: auto;
@@ -252,7 +288,7 @@ a.contactlinks:hover {
   box-shadow: 8px 8px 5px grey;
   /* display: flex;
   justify-content: center; */
-  margin-left: 25%;
+  margin-left: 15%;
   margin-right: 0px;
 }
 
@@ -260,12 +296,21 @@ a.contactlinks:hover {
   margin-left: 3%;
   flex: 0 0 60%;
 }
+.row{
+  display: flex;
+}
+.column{
+  flex:100%;
+  padding: 5px;
+  margin: auto 50px auto auto;
+}
 
 @media screen and (max-width: 922px) {
   main,
   nav,
   .section {
     flex-direction: row;
+
   }
   .headertext {
     padding-top: 20%;
@@ -287,6 +332,10 @@ a.contactlinks:hover {
   nav,
   .section {
     flex-direction: column;
+  }
+  div {
+    display: flex;
+    justify-content: center;
   }
   .headertext {
     padding-top: 80%;
@@ -310,8 +359,6 @@ a.contactlinks:hover {
     border-top: none;
   }
   a.navbar {
-    display: flex;
-    justify-content: center;
     padding: 10px 20px;
     width: 50%;
     text-align: center;
@@ -320,5 +367,63 @@ a.contactlinks:hover {
     display: flex;
     justify-content: center;
     text-align: center;
+    padding: 10px 20px;
+  }
+  #firstlink,
+  #secondlink,
+  #thirdlink {
+    display: flex;
+    justify-content: center;
+    /* padding: 10px 0px; */
+  }
+  #lets,
+  #code,
+  #together {
+    margin-top: 30%;
+    color:black;
+  }
+  #together {
+    border-bottom: 5px solid black;}
+  .horizion{
+    width:100%;
+    height: 100%;
+  }
+  .text {
+    width: 100%;
   }
 }
+@media screen and (max-width: 300px) {
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  .bannerimg {
+    margin-top: 20% 0px 0px 5%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+@media screen and (max-width: 300px) {
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  .bannerimg {
+    margin-top: 20% 0px 0px 5%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #lets,
+  #code,
+  #together {
+    color: black;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .text {
+    width: 100%;
+  }
+  .img {
+    margin-top: 50%;
+  }
+
