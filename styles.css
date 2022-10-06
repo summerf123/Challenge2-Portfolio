@@ -178,10 +178,11 @@ body {
   width: 90%;
   margin: 10% auto;
   font-size: 20px;
+  margin-top: 157px;
 }
-.section:nth-of-type(1) {
+/* .section:nth-of-type(1) {
   margin-top: 15%;
-} /* this put the margin top only on the first element so it makes white space before getting into main content */
+} this put the margin top only on the first element so it makes white space before getting into main content */
 
 .portfolioheader1 {
   font-family: "PT Sans", sans-serif;
@@ -452,7 +453,7 @@ div.row {
   }
   a.navbar {
     padding: 10px 0px;
-    width: 21%;
+    width: 33%;
     text-align: center;
   }
   div#firstlink,
@@ -532,11 +533,9 @@ div.row {
     min-width: 100%;
     min-height: 100%;
   }
+
   .section:nth-of-type(1) {
-    margin-top: 32%;
-  }
-  .section:nth-of-type(1) {
-    margin-top: 50%;
+    margin-top: 70%;
   } /* this put the margin top only on the first element so it makes white space before getting into main content */
   .contactlinksdiv {
     display: flex;
@@ -562,8 +561,15 @@ div.row {
   div.description {
     margin: 0;
   }
+  a.navbar {
+    width: 33%;
+  }
 }
-
+@media screen and (max-width: 350px) {
+  .section:nth-of-type(1) {
+    margin-top: 70%;
+  }
+}
 @media screen and (max-width: 200px) {
   div {
     display: flex;
@@ -591,10 +597,13 @@ div.row {
     margin-top: 50%;
   }
   .section:nth-of-type(1) {
-    margin-top: 32%;
+    margin-top: 70%;
   }
   .description {
     display: flex;
     flex-direction: column;
+  }
+  a.navbar {
+    width: 100%;
   }
 }
